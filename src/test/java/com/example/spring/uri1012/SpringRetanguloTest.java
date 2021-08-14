@@ -26,7 +26,7 @@ class SpringRetanguloTest {
 		mvc.perform(MockMvcRequestBuilders.get("/retangulo/")
 				.param("base", "5").param("altura", "6"))
 				.andExpect(status().isOk())
-				.andExpect(content().string("{\"area\":30.0}"));
+				.andExpect(content().string("Calculo Retangulo : 30.0"));
 	}
 
 }

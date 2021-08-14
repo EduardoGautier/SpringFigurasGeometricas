@@ -12,8 +12,9 @@ import com.example.model.Triangulo;
 public class TrianguloRestController {
 	
 	@GetMapping("/")
-	public Triangulo calculaTriangulo(@RequestParam double base,  double altura) {
-		return new Triangulo(base, altura);
+	public String calculaTriangulo(@RequestParam double base,  double altura) {
+		Triangulo tr = new Triangulo(base, altura);
+		return "Calculo Triangulo: "+tr.getArea();
 	}
 
 }

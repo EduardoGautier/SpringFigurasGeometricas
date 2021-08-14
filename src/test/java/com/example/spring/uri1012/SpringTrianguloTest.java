@@ -22,7 +22,7 @@ class SpringTrianguloTest {
 	@Test
 	public void getArea() throws Exception {
 		mvc.perform(MockMvcRequestBuilders.get("/triangulo/").param("base", "5").param("altura", "5"))
-				.andExpect(status().isOk()).andExpect(content().string("{\"base\":5.0,\"altura\":5.0,\"area\":12.5}"));
+				.andExpect(status().isOk()).andExpect(content().string("Calculo Triangulo: 12.5"));
 	}
 
 }

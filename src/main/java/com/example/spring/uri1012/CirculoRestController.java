@@ -14,11 +14,11 @@ public class CirculoRestController {
 
 	
 	@GetMapping("/")
-	public Circulo CalculaArea (@RequestParam double raio) {
+	public String CalculaArea (@RequestParam double raio) {
 		Circulo c = new Circulo(raio);
 		
 		
-		return c ;
+		return "Calculo Circulo : "+c.getArea() ;
 		
 	}
 

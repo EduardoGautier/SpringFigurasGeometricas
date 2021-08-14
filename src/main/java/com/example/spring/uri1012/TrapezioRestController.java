@@ -12,7 +12,8 @@ import com.example.model.Trapezio;
 public class TrapezioRestController {
 	
 	@GetMapping("/")
-	public Trapezio calculaTrapezio(@RequestParam double base1, double base2, double altura) {
-		return new Trapezio(base1, base2, altura);
+	public String calculaTrapezio(@RequestParam double base1, double base2, double altura) {
+		Trapezio t1 = new Trapezio(base1, base2, altura);
+		return "Calculo Trapezio: "+t1.getArea();
 	}
 }

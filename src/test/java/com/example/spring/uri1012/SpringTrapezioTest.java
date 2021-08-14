@@ -22,8 +22,10 @@ class SpringTrapezioTest {
 
 	@Test
 	public void getArea() throws Exception {
-		mvc.perform(MockMvcRequestBuilders.get("/trapezio/").param("base1", "3").param("base2", "4").param("altura", "5.2"))
-				.andExpect(status().isOk()).andExpect(content().string("{\"area\":18.2}"));
+		mvc.perform(MockMvcRequestBuilders.get("/trapezio/")
+				.param("base1", "3").param("base2", "4").param("altura", "5.2"))
+				.andExpect(status().isOk())
+				.andExpect(content().string("Calculo Trapezio: 18.2"));
 	}
 
 }

@@ -12,8 +12,10 @@ import com.example.model.Retangulo;
 public class RetanguloRestController {
 	
 	@GetMapping("/")
-	public Retangulo calculoRetangulo(@RequestParam double base , double altura) {
-		return new Retangulo(base, altura);
+	public String calculoRetangulo(@RequestParam double base , double altura) {
+		Retangulo r1 = new Retangulo(base, altura);
+		
+		return "Calculo Retangulo : "+r1.getArea();
 	}
 	
 }

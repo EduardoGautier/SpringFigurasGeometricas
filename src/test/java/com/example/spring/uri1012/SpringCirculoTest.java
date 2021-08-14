@@ -1,6 +1,5 @@
 package com.example.spring.uri1012;
 
-
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -24,9 +23,9 @@ class SpringCirculoTest {
 	@Test
 	public void getArea() throws Exception {
 		mvc.perform(MockMvcRequestBuilders.get("/circulo/")
-				.param("raio", "1"))
+				.param("raio", "2"))
 				.andExpect(status().isOk())
-				.andExpect(content().string("{\"area\":3.14159}"));
+				.andExpect(content().string("Calculo Circulo : 12.56636"));
 	}
 
 }

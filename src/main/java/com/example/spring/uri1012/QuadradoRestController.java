@@ -12,8 +12,10 @@ import com.example.model.Quadrado;
 public class QuadradoRestController {
 	
   @GetMapping("/")
-  public Quadrado calcularQuadrado(@RequestParam double lado){
-	  return new Quadrado(lado);
+  public String calcularQuadrado(@RequestParam double lado){
+	  Quadrado q1 = new Quadrado(lado);
+	  
+	  return "Calculo Quadrado: "+q1.getArea();
   }
   
 }

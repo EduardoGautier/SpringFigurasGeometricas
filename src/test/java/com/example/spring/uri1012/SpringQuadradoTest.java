@@ -26,7 +26,7 @@ class SpringQuadradoTest {
 		mvc.perform(MockMvcRequestBuilders.get("/quadrado/")
 				.param("lado", "5"))
 				.andExpect(status().isOk())
-				.andExpect(content().string("{\"area\":25.0}"));
+				.andExpect(content().string("Calculo Quadrado: 25.0"));
 	}
 
 }
