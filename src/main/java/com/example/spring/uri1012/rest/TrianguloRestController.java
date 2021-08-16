@@ -1,4 +1,4 @@
-package com.example.spring.uri1012;
+package com.example.spring.uri1012.rest;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
